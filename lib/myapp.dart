@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_todo_list/pages/PushPopNavigator.dart';
 
-import 'pages/HomePage.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const PushPopNavigator(),
     );
   }
 }
