@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_todo_list/pages/HomePage.dart';
+import 'package:youtube_todo_list/pages/ListviewPage.dart';
 
 class PushPopNavigator extends StatefulWidget {
   const PushPopNavigator({super.key, this.layerNumber});
@@ -38,15 +40,21 @@ class _PushPopNavigatorState extends State<PushPopNavigator> {
           Column(
             children: [
               InkWell(
-                child: Text("Press to push a new page"),
+                child: Text("Press to push a new Pushpop Page"),
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => PushPopNavigator(layerNumber: (myLayer + 1),)));
                 },
               ),
               InkWell(
-                child: Text("Press to pop the page"),
+                child: Text("Press to push a new Listview Page"),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ListviewPage()));
+                },
+              ),
+              InkWell(
+                child: Text("Press to push a Home page"),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                 },
               ),
               Container(height: 100,)
